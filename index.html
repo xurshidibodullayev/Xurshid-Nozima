@@ -3,434 +3,413 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Xurshid & Nozima — To‘qqiz to‘y</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
+
 :root{
-  --cream:#faf6ee;
-  --gold:#b88a35;
-  --gold2:#d8b86a;
-  --green:#173b35;
-  --wine:#6f3943;
-  --text:#263832;
+    --wine:#743f4c;
+    --gold:#b79a5b;
+    --cream:#faf8f4;
+    --dark:#263b49;
+    --white:#ffffff;
 }
 
-*{box-sizing:border-box}
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
 
-html{scroll-behavior:smooth}
+html{
+    scroll-behavior:smooth;
+}
 
 body{
-  margin:0;
-  background:#eee8de;
-  color:var(--text);
-  font-family:'Montserrat',sans-serif;
+    background:#eee9e4;
+    color:var(--dark);
+    font-family:'Montserrat',sans-serif;
 }
 
 .page{
-  width:100%;
-  max-width:720px;
-  margin:auto;
-  background:var(--cream);
-  overflow:hidden;
-  position:relative;
+    max-width:680px;
+    margin:auto;
+    background:white;
+    overflow:hidden;
+    box-shadow:0 0 40px rgba(0,0,0,.12);
 }
 
-/* ---------- HERO ---------- */
+/* HERO */
 
 .hero{
-  min-height:100vh;
-  position:relative;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:35px 25px;
-  text-align:center;
-  background:
-    radial-gradient(circle at 15% 15%,rgba(216,184,106,.25),transparent 25%),
-    radial-gradient(circle at 90% 85%,rgba(111,57,67,.15),transparent 30%),
-    linear-gradient(145deg,#fbf7ef,#efe4d4);
+    min-height:100vh;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:
+        linear-gradient(rgba(65,42,48,.60),rgba(65,42,48,.68)),
+        url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=85")
+        center/cover;
 }
 
-.hero:before,
-.hero:after{
-  content:"";
-  position:absolute;
-  width:210px;
-  height:210px;
-  border-radius:50%;
-  border:1px solid rgba(184,138,53,.25);
+.hero-frame{
+    width:88%;
+    min-height:88vh;
+    border:1px solid rgba(255,255,255,.65);
+    padding:55px 25px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    position:relative;
 }
 
-.hero:before{
-  top:-110px;
-  left:-100px;
+.hero-frame:before,
+.hero-frame:after{
+    content:"✦";
+    position:absolute;
+    color:#d2b66d;
+    font-size:30px;
 }
 
-.hero:after{
-  bottom:-110px;
-  right:-100px;
+.hero-frame:before{
+    top:25px;
+    left:25px;
 }
 
-.flower{
-  position:absolute;
-  color:var(--gold);
-  font-size:50px;
-  opacity:.7;
-}
-
-.f1{top:30px;left:25px}
-.f2{top:90px;right:25px}
-.f3{bottom:40px;left:30px}
-.f4{bottom:80px;right:25px}
-
-.frame{
-  position:relative;
-  width:100%;
-  min-height:92vh;
-  padding:55px 20px;
-  border:1px solid rgba(184,138,53,.65);
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  box-shadow:
-    inset 0 0 0 7px rgba(255,255,255,.35),
-    inset 0 0 0 8px rgba(184,138,53,.15);
-}
-
-.frame:before,
-.frame:after{
-  content:"✦";
-  position:absolute;
-  color:var(--gold);
-  font-size:28px;
-}
-
-.frame:before{top:18px;left:50%}
-.frame:after{bottom:18px;left:50%}
-
-.bismillah{
-  font-size:13px;
-  letter-spacing:5px;
-  margin-bottom:35px;
-  color:#53645e;
-}
-
-.invite{
-  font-family:'Cormorant Garamond',serif;
-  font-size:22px;
-  font-style:italic;
-  margin-bottom:15px;
-}
-
-.ornament{
-  color:var(--gold);
-  font-size:30px;
-  margin:8px 0;
-}
-
-.title{
-  font-family:'Great Vibes',cursive;
-  font-size:clamp(70px,18vw,125px);
-  line-height:.85;
-  color:var(--gold);
-  margin:15px 0 25px;
-  text-shadow:0 2px 0 #fff;
-}
-
-.subtitle{
-  letter-spacing:7px;
-  font-size:16px;
-  line-height:2;
-  font-weight:500;
-}
-
-.names{
-  font-family:'Great Vibes',cursive;
-  font-size:clamp(55px,13vw,90px);
-  color:var(--green);
-  margin:30px 0;
-  line-height:1;
-}
-
-.heart{
-  color:var(--gold);
-  font-family:serif;
-}
-
-.date{
-  border-top:1px solid rgba(184,138,53,.45);
-  border-bottom:1px solid rgba(184,138,53,.45);
-  padding:17px 30px;
-  margin:10px 0 30px;
-  font-family:'Cormorant Garamond',serif;
-  font-size:24px;
-}
-
-.open{
-  border:1px solid var(--gold);
-  background:var(--green);
-  color:white;
-  padding:17px 32px;
-  font-size:13px;
-  letter-spacing:2px;
-  text-decoration:none;
-  transition:.3s;
-}
-
-.open:hover{
-  background:var(--wine);
-  transform:translateY(-3px);
-}
-
-/* ---------- SECTIONS ---------- */
-
-.section{
-  position:relative;
-  padding:90px 28px;
-  text-align:center;
-  background:#fffdf8;
-}
-
-.section:nth-child(even){
-  background:
-    radial-gradient(circle at 10% 20%,rgba(216,184,106,.13),transparent 25%),
-    radial-gradient(circle at 90% 80%,rgba(111,57,67,.08),transparent 25%),
-    #f8f1e5;
+.hero-frame:after{
+    bottom:25px;
+    right:25px;
 }
 
 .small-title{
-  color:#a78a56;
-  letter-spacing:5px;
-  font-size:12px;
-  margin-bottom:15px;
+    color:white;
+    font-size:13px;
+    letter-spacing:7px;
+    margin-bottom:35px;
+    font-weight:400;
+}
+
+.decor{
+    color:#d0ad5e;
+    font-size:26px;
+    letter-spacing:12px;
+    margin-bottom:22px;
+}
+
+.hero h1{
+    font-family:'Great Vibes',cursive;
+    font-size:78px;
+    line-height:.95;
+    color:white;
+    font-weight:400;
+    text-shadow:0 4px 15px rgba(0,0,0,.25);
+}
+
+.and{
+    font-family:'Great Vibes',cursive;
+    color:#d3b46b;
+    font-size:58px;
+    margin:8px 0;
+}
+
+.event-name{
+    font-family:'Playfair Display',serif;
+    color:white;
+    font-size:27px;
+    letter-spacing:7px;
+    margin:25px 0 32px;
+    text-transform:uppercase;
+}
+
+.date{
+    color:white;
+    font-size:19px;
+    letter-spacing:3px;
+}
+
+.open-btn{
+    margin-top:38px;
+    padding:17px 35px;
+    border:1px solid #d2b66d;
+    color:white;
+    text-decoration:none;
+    letter-spacing:2px;
+    font-size:13px;
+    transition:.3s;
+}
+
+.open-btn:hover{
+    background:#d2b66d;
+    color:#432d34;
+}
+
+/* INTRO */
+
+.section{
+    padding:90px 38px;
+    text-align:center;
+    background:white;
+}
+
+.label{
+    font-size:12px;
+    letter-spacing:7px;
+    color:var(--gold);
+    margin-bottom:25px;
+}
+
+.names{
+    font-family:'Great Vibes',cursive;
+    font-size:60px;
+    color:var(--wine);
+    font-weight:400;
+    line-height:1;
+}
+
+.flower{
+    color:var(--gold);
+    font-size:30px;
+    margin:35px 0;
+}
+
+.intro{
+    font-family:'Playfair Display',serif;
+    font-size:20px;
+    line-height:1.9;
+    color:#4e5054;
+}
+
+/* COUNTDOWN */
+
+.count-section{
+    padding:85px 25px;
+    text-align:center;
+    background:
+        linear-gradient(rgba(250,248,244,.92),rgba(250,248,244,.94)),
+        url("https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1200&q=80")
+        center/cover;
 }
 
 .script{
-  font-family:'Great Vibes',cursive;
-  color:var(--wine);
-  font-size:65px;
-  line-height:1;
-  margin:15px 0 35px;
+    font-family:'Great Vibes',cursive;
+    font-size:64px;
+    color:var(--wine);
+    margin-bottom:35px;
 }
-
-.text{
-  font-family:'Cormorant Garamond',serif;
-  font-size:22px;
-  line-height:1.7;
-  max-width:580px;
-  margin:auto;
-}
-
-.gold-line{
-  width:120px;
-  height:1px;
-  background:var(--gold);
-  margin:30px auto;
-}
-
-/* ---------- INFO ---------- */
-
-.info-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:14px;
-  margin-top:35px;
-}
-
-.info{
-  background:rgba(255,255,255,.75);
-  border:1px solid rgba(184,138,53,.45);
-  padding:25px 10px;
-  min-height:150px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  box-shadow:0 10px 30px rgba(80,50,20,.06);
-}
-
-.icon{
-  font-size:30px;
-  color:var(--gold);
-  margin-bottom:10px;
-}
-
-.info span{
-  font-size:11px;
-  letter-spacing:3px;
-  color:#927e68;
-}
-
-.info strong{
-  font-family:'Cormorant Garamond',serif;
-  font-size:24px;
-  margin-top:8px;
-}
-
-/* ---------- COUNTDOWN ---------- */
 
 .countdown{
-  background:var(--green);
-  color:white;
-  padding:45px 15px;
-  position:relative;
-  margin-top:45px;
-  border:4px solid #d5b66c;
-  outline:1px solid rgba(255,255,255,.4);
-  outline-offset:-10px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
 }
 
-.count-title{
-  letter-spacing:4px;
-  font-size:12px;
-  color:#e5c982;
-  margin-bottom:25px;
+.time-box{
+    background:rgba(255,255,255,.82);
+    border:1px solid #d9cdbd;
+    padding:25px 5px;
 }
 
-.timer{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
+.time-box span{
+    display:block;
 }
 
-.timer div{
-  border-right:1px solid rgba(255,255,255,.25);
+.number{
+    font-size:36px;
+    color:var(--wine);
+    font-weight:500;
 }
 
-.timer div:last-child{border:0}
-
-.timer b{
-  display:block;
-  font-family:'Cormorant Garamond',serif;
-  color:#e8c979;
-  font-size:42px;
+.unit{
+    margin-top:8px;
+    color:#8e8179;
+    font-size:10px;
+    letter-spacing:3px;
 }
 
-.timer span{
-  font-size:9px;
-  letter-spacing:2px;
+/* EVENT */
+
+.event{
+    padding:85px 35px;
+    background:#fff;
+    text-align:center;
 }
 
-/* ---------- LOCATION ---------- */
+.event-card{
+    border:1px solid #ded5ca;
+    padding:45px 20px;
+    margin-top:35px;
+    position:relative;
+}
+
+.event-card:before{
+    content:"✿";
+    position:absolute;
+    top:-19px;
+    left:50%;
+    transform:translateX(-50%);
+    background:white;
+    padding:0 15px;
+    color:var(--gold);
+    font-size:27px;
+}
+
+.event-icon{
+    font-size:40px;
+    color:var(--gold);
+    margin-bottom:15px;
+}
+
+.event-title{
+    font-family:'Playfair Display',serif;
+    font-size:25px;
+    color:var(--wine);
+    margin-bottom:18px;
+}
+
+.event-text{
+    font-size:15px;
+    line-height:1.8;
+    color:#666;
+}
 
 .location{
-  margin-top:30px;
-  padding:35px 20px;
-  border:1px solid rgba(184,138,53,.5);
+    display:inline-block;
+    margin-top:25px;
+    padding:13px 24px;
+    border:1px solid var(--gold);
+    color:var(--wine);
+    text-decoration:none;
+    font-size:13px;
+    letter-spacing:1px;
 }
 
-.location .pin{
-  font-size:40px;
+/* QUOTE */
+
+.quote{
+    padding:95px 35px;
+    background:var(--wine);
+    text-align:center;
+    color:white;
+    position:relative;
 }
 
-.location h3{
-  font-family:'Cormorant Garamond',serif;
-  font-size:34px;
-  margin:12px 0;
+.quote:before,
+.quote:after{
+    content:"❦";
+    color:#d2b66d;
+    font-size:38px;
+    position:absolute;
 }
 
-.map-btn{
-  display:inline-block;
-  margin-top:20px;
-  padding:15px 25px;
-  background:var(--green);
-  color:white;
-  text-decoration:none;
-  font-size:12px;
-  letter-spacing:1px;
+.quote:before{
+    top:25px;
+    left:35px;
 }
 
-/* ---------- RSVP ---------- */
-
-.rsvp{
-  display:flex;
-  justify-content:center;
-  gap:12px;
-  flex-wrap:wrap;
-  margin-top:30px;
+.quote:after{
+    bottom:25px;
+    right:35px;
 }
 
-.rsvp a{
-  text-decoration:none;
-  padding:15px 25px;
-  border:1px solid var(--gold);
-  color:var(--green);
-  background:white;
+.quote p{
+    font-family:'Playfair Display',serif;
+    font-size:23px;
+    line-height:1.8;
+    font-style:italic;
 }
 
-.rsvp a:first-child{
-  background:var(--green);
-  color:white;
-}
-
-/* ---------- FOOTER ---------- */
+/* FOOTER */
 
 .footer{
-  padding:80px 20px;
-  text-align:center;
-  background:var(--green);
-  color:white;
+    padding:70px 30px;
+    text-align:center;
+    background:#faf8f4;
 }
 
 .footer .names{
-  color:#e2c171;
-  margin:20px 0;
+    font-size:55px;
 }
 
-.footer p{
-  font-family:'Cormorant Garamond',serif;
-  font-size:21px;
+.footer-text{
+    margin-top:25px;
+    color:#777;
+    font-size:13px;
+    letter-spacing:2px;
+    line-height:1.8;
 }
 
-/* ---------- FLOATING MUSIC ---------- */
+.heart{
+    color:var(--wine);
+    font-size:28px;
+    margin-top:25px;
+}
+
+/* MUSIC */
 
 .music{
-  position:fixed;
-  right:20px;
-  bottom:25px;
-  width:58px;
-  height:58px;
-  border-radius:50%;
-  border:1px solid #e0c278;
-  background:var(--wine);
-  color:white;
-  font-size:23px;
-  z-index:99;
-  box-shadow:0 8px 25px rgba(0,0,0,.2);
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:var(--wine);
+    color:white;
+    border:none;
+    font-size:23px;
+    box-shadow:0 5px 20px rgba(0,0,0,.25);
+    cursor:pointer;
+    z-index:10;
 }
 
-/* ---------- PETALS ---------- */
+/* MOBILE */
 
-.petal{
-  position:absolute;
-  color:#c99e4c;
-  opacity:.35;
-  animation:float 7s infinite ease-in-out;
+@media(max-width:500px){
+
+    .hero h1{
+        font-size:64px;
+    }
+
+    .and{
+        font-size:48px;
+    }
+
+    .event-name{
+        font-size:21px;
+        letter-spacing:4px;
+    }
+
+    .names{
+        font-size:50px;
+    }
+
+    .intro{
+        font-size:18px;
+    }
+
+    .script{
+        font-size:55px;
+    }
+
+    .number{
+        font-size:29px;
+    }
+
+    .quote p{
+        font-size:20px;
+    }
+
 }
 
-.p1{left:8%;top:45%;font-size:20px}
-.p2{right:10%;top:65%;font-size:26px}
-.p3{left:20%;bottom:20%;font-size:18px}
-.p4{right:20%;bottom:30%;font-size:22px}
-
-@keyframes float{
-  0%,100%{transform:translateY(0) rotate(0)}
-  50%{transform:translateY(-18px) rotate(12deg)}
-}
-
-@media(max-width:420px){
-  .hero{padding:18px}
-  .frame{padding:40px 14px}
-  .bismillah{font-size:10px;letter-spacing:3px}
-  .subtitle{font-size:12px;letter-spacing:4px}
-  .info-grid{gap:8px}
-  .info{padding:18px 5px}
-  .timer b{font-size:32px}
-  .script{font-size:55px}
-}
 </style>
 </head>
 
@@ -438,261 +417,206 @@ body{
 
 <div class="page">
 
-<!-- HERO -->
+<!-- 1-QISM -->
+
 <section class="hero">
 
-  <div class="flower f1">❀</div>
-  <div class="flower f2">✿</div>
-  <div class="flower f3">❁</div>
-  <div class="flower f4">❀</div>
+    <div class="hero-frame">
 
-  <div class="petal p1">✦</div>
-  <div class="petal p2">❋</div>
-  <div class="petal p3">✦</div>
-  <div class="petal p4">❋</div>
+        <div class="small-title">
+            SIZ TAKLIF QILINGAN
+        </div>
 
-  <div class="frame">
+        <div class="decor">
+            ✦ ❀ ✦
+        </div>
 
-    <div class="bismillah">
-      BISMILLAHIR ROHMANIR ROHIYM
+        <h1>Xurshid</h1>
+
+        <div class="and">&</div>
+
+        <h1>Nozima</h1>
+
+        <div class="event-name">
+            To‘qqiz to‘y
+        </div>
+
+        <div class="date">
+            13-sentabr, 2026-yil
+        </div>
+
+        <a href="#taklif" class="open-btn">
+            ❀ TAKLIFNOMANI OCHISH ❀
+        </a>
+
     </div>
 
-    <div class="invite">
-      Aziz va qadrli yaqinlar!
-    </div>
+</section>
 
-    <div class="ornament">✦ ♡ ✦</div>
 
-    <div class="title">
-      To‘qqiz to‘y
-    </div>
+<!-- 2-QISM -->
 
-    <div class="subtitle">
-      DASTURXONIMIZGA<br>
-      TAKLIF ETAMIZ
+<section class="section" id="taklif">
+
+    <div class="label">
+        BIZNING QUVONCHLI KUNIMIZ
     </div>
 
     <div class="names">
-      Xurshid <span class="heart">♡</span> Nozima
+        Xurshid & Nozima
     </div>
 
-    <div class="date">
-      13-sentabr, 2026-yil
+    <div class="flower">
+        ✿
     </div>
 
-    <a href="#taklif" class="open">
-      ✿ &nbsp; TAKLIFNOMANI OCHISH &nbsp; ✿
-    </a>
-
-  </div>
-</section>
-
-
-<!-- TAKLIF -->
-<section class="section" id="taklif">
-
-  <div class="small-title">
-    BIZNING QUvonchli KUNIMIZ
-  </div>
-
-  <div class="script">
-    Siz azizsiz!
-  </div>
-
-  <div class="ornament">❦</div>
-
-  <p class="text">
-    Hayotimizdagi unutilmas va quvonchli kunlardan
-    birida siz azizlarni yonimizda ko‘rish biz uchun
-    katta baxtdir.
-  </p>
-
-  <div class="gold-line"></div>
-
-  <p class="text">
-    Shu munosabat bilan sizni
-    <b>Xurshid & Nozima</b>ning
-    <b>To‘qqiz to‘y</b> tantanasiga
-    samimiy taklif etamiz.
-  </p>
-
-</section>
-
-
-<!-- SANA VA VAQT -->
-<section class="section">
-
-  <div class="small-title">
-    UNUTILMAS LAHZAGACHA
-  </div>
-
-  <div class="script">
-    To‘yimizgacha
-  </div>
-
-  <div class="countdown">
-
-    <div class="count-title">
-      ✦ TO‘YIMIZ BOSHLANISHIGA QOLDI ✦
-    </div>
-
-    <div class="timer">
-      <div>
-        <b id="days">00</b>
-        <span>KUN</span>
-      </div>
-
-      <div>
-        <b id="hours">00</b>
-        <span>SOAT</span>
-      </div>
-
-      <div>
-        <b id="minutes">00</b>
-        <span>DAQIQA</span>
-      </div>
-
-      <div>
-        <b id="seconds">00</b>
-        <span>SONIYA</span>
-      </div>
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- MA'LUMOTLAR -->
-<section class="section">
-
-  <div class="small-title">
-    TO‘Y TANTANAMIZ
-  </div>
-
-  <div class="script">
-    Sizni kutamiz
-  </div>
-
-  <div class="info-grid">
-
-    <div class="info">
-      <div class="icon">♡</div>
-      <span>SANA</span>
-      <strong>13-sentabr<br>2026-yil</strong>
-    </div>
-
-    <div class="info">
-      <div class="icon">◷</div>
-      <span>VAQT</span>
-      <strong>19:00</strong>
-    </div>
-
-    <div class="info">
-      <div class="icon">♜</div>
-      <span>TO‘Y TANTANASI</span>
-      <strong>Gulshan toʻyxonasi</strong>
-    </div>
-
-    <div class="info">
-      <div class="icon">⌖</div>
-      <span>MANZIL</span>
-      <strong>Navoiy shahri</strong>
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- MANZIL -->
-<section class="section">
-
-  <div class="small-title">
-    SIZ UCHUN MAXSUS
-  </div>
-
-  <div class="script">
-    Manzil
-  </div>
-
-  <div class="location">
-
-    <div class="pin">⌖</div>
-
-    <h3>Navoiy shahri</h3>
-
-    <p class="text">
-      Sizni quvonchli kunimizda kutib qolamiz.
+    <p class="intro">
+        Hayotimizning eng unutilmas va quvonchli
+        kunlaridan birida siz azizlarni yonimizda
+        ko‘rish biz uchun katta baxt.
+        Shu munosabat bilan sizni
+        <b>To‘qqiz to‘y</b> tantanamizga
+        samimiy taklif etamiz.
     </p>
 
-    <a
-      class="map-btn"
-      href="https://www.google.com/maps/search/?api=1&query=Navoiy+shahri"
-      target="_blank">
-      ⌖ &nbsp; XARITADA OCHISH
-    </a>
+</section>
 
-  </div>
+
+<!-- 3-QISM -->
+
+<section class="count-section">
+
+    <div class="label">
+        UNUTILMAS LAHZAGACHA
+    </div>
+
+    <div class="script">
+        To‘yimizgacha
+    </div>
+
+    <div class="countdown">
+
+        <div class="time-box">
+            <span class="number" id="days">00</span>
+            <span class="unit">KUN</span>
+        </div>
+
+        <div class="time-box">
+            <span class="number" id="hours">00</span>
+            <span class="unit">SOAT</span>
+        </div>
+
+        <div class="time-box">
+            <span class="number" id="minutes">00</span>
+            <span class="unit">DAQIQA</span>
+        </div>
+
+        <div class="time-box">
+            <span class="number" id="seconds">00</span>
+            <span class="unit">SONIYA</span>
+        </div>
+
+    </div>
 
 </section>
 
 
-<!-- RSVP -->
-<section class="section">
+<!-- 4-QISM -->
 
-  <div class="small-title">
-    SIZNING ISHTIROKINGIZ
-  </div>
+<section class="event">
 
-  <div class="script">
-    Biz uchun muhim
-  </div>
+    <div class="label">
+        TADBIR MANZILI
+    </div>
 
-  <p class="text">
-    To‘yimizga tashrif buyurishingizni
-    oldindan tasdiqlab qo‘ysangiz,
-    biz juda xursand bo‘lamiz.
-  </p>
+    <div class="script">
+        Sizni kutamiz
+    </div>
 
-  <div class="rsvp">
-    <a href="tel:+998901234567">✓ Boraman</a>
-    <a href="tel:+998901234567">♡ Javob berish</a>
-  </div>
+    <div class="event-card">
+
+        <div class="event-icon">
+            ♡
+        </div>
+
+        <div class="event-title">
+            To‘qqiz to‘y
+        </div>
+
+        <p class="event-text">
+            Siz aziz mehmonlarni ushbu
+            quvonchli kunimizda kutib qolamiz.
+        </p>
+
+        <div class="flower">
+            ✿
+        </div>
+
+        <p class="event-text">
+            <b>📍 Navoiy shahri</b>
+        </p>
+
+        <a
+          class="location"
+          href="https://www.google.com/maps/search/Navoiy+shahri"
+          target="_blank">
+          🗺 MANZILNI XARITADA KO‘RISH
+        </a>
+
+    </div>
 
 </section>
 
 
-<!-- FOOTER -->
-<footer class="footer">
+<!-- 5-QISM -->
 
-  <div class="ornament">✦ ♡ ✦</div>
+<section class="quote">
 
-  <p>
-    Sizning tashrifingiz biz uchun<br>
-    eng katta sovg‘adir!
-  </p>
+    <p>
+        “Baxt — uni yaqinlaringiz bilan
+        baham ko‘rganingizda yanada go‘zal.”
+    </p>
 
-  <div class="names">
-    Xurshid ♡ Nozima
-  </div>
+</section>
 
-  <div class="ornament">❦</div>
 
-  <p style="font-size:14px;letter-spacing:3px;">
-    TO‘QQIZ TO‘Y • 2026
-  </p>
+<!-- 6-QISM -->
 
-</footer>
+<section class="footer">
+
+    <div class="label">
+        E'TIBORINGIZ UCHUN RAHMAT
+    </div>
+
+    <div class="names">
+        Xurshid & Nozima
+    </div>
+
+    <div class="heart">
+        ♡
+    </div>
+
+    <div class="footer-text">
+        Sizni To‘qqiz to‘yimizda kutib qolamiz
+        <br>
+        13-sentabr, 2026-yil
+        <br>
+        Navoiy shahri
+    </div>
+
+</section>
 
 </div>
 
 
-<!-- MUSIC BUTTON -->
-<button class="music" onclick="toggleMusic()" id="musicBtn">♪</button>
+<!-- MUSIQA -->
+
+<button class="music" onclick="toggleMusic()" id="musicBtn">
+    ♪
+</button>
 
 <audio id="music" loop>
-  <!-- Bu yerga MP3 faylingiz havolasini qo‘ying -->
+    <source src="music.mp3" type="audio/mpeg">
 </audio>
 
 
@@ -700,54 +624,82 @@ body{
 
 /* COUNTDOWN */
 
-const weddingDate = new Date("September 13, 2026 19:00:00").getTime();
+const weddingDate =
+    new Date("September 13, 2026 17:00:00").getTime();
 
 function countdown(){
 
-  const now = new Date().getTime();
-  const distance = weddingDate - now;
+    const now = new Date().getTime();
+    const distance = weddingDate - now;
 
-  if(distance <= 0){
-    document.getElementById("days").innerText="00";
-    document.getElementById("hours").innerText="00";
-    document.getElementById("minutes").innerText="00";
-    document.getElementById("seconds").innerText="00";
-    return;
-  }
+    if(distance < 0){
+        document.getElementById("days").innerText="00";
+        document.getElementById("hours").innerText="00";
+        document.getElementById("minutes").innerText="00";
+        document.getElementById("seconds").innerText="00";
+        return;
+    }
 
-  const days = Math.floor(distance/(1000*60*60*24));
-  const hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
-  const minutes = Math.floor((distance%(1000*60*60))/(1000*60));
-  const seconds = Math.floor((distance%(1000*60))/1000);
+    const days =
+        Math.floor(distance/(1000*60*60*24));
 
-  document.getElementById("days").innerText=String(days).padStart(2,"0");
-  document.getElementById("hours").innerText=String(hours).padStart(2,"0");
-  document.getElementById("minutes").innerText=String(minutes).padStart(2,"0");
-  document.getElementById("seconds").innerText=String(seconds).padStart(2,"0");
+    const hours =
+        Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+
+    const minutes =
+        Math.floor((distance%(1000*60*60))/(1000*60));
+
+    const seconds =
+        Math.floor((distance%(1000*60))/1000);
+
+    document.getElementById("days").innerText =
+        String(days).padStart(2,"0");
+
+    document.getElementById("hours").innerText =
+        String(hours).padStart(2,"0");
+
+    document.getElementById("minutes").innerText =
+        String(minutes).padStart(2,"0");
+
+    document.getElementById("seconds").innerText =
+        String(seconds).padStart(2,"0");
 }
 
-countdown();
 setInterval(countdown,1000);
+countdown();
 
 
 /* MUSIC */
 
-const music=document.getElementById("music");
-const musicBtn=document.getElementById("musicBtn");
+let playing=false;
 
 function toggleMusic(){
 
-  if(music.paused){
-    music.play();
-    musicBtn.innerHTML="❚❚";
-  }else{
-    music.pause();
-    musicBtn.innerHTML="♪";
-  }
+    const music =
+        document.getElementById("music");
 
+    const button =
+        document.getElementById("musicBtn");
+
+    if(!playing){
+
+        music.play();
+
+        button.innerHTML="❚❚";
+
+        playing=true;
+
+    }else{
+
+        music.pause();
+
+        button.innerHTML="♪";
+
+        playing=false;
+    }
 }
 
 </script>
 
 </body>
-  </html>
+</html>
